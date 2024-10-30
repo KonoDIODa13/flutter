@@ -16,8 +16,8 @@ class MainApp extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               const Text('Texto1'),
-                const Text('Texto2'),
+               const Text('Texto 1'),
+                const Text('Texto 2'),
               ],
             ),
           Row(
