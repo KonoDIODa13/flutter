@@ -9,17 +9,30 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body: GridView.count(
           crossAxisCount: 3,
           children: [
             Container(
-              child: Image.asset(""),
-            )
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                child: Padding(
+                    padding: const EdgeInsets.all(2),
+                    child: Image.asset("lib/assets/post1.jpg"))),
+                    Container(
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                child: Padding(
+                    padding: const EdgeInsets.all(2),
+                    child: Image.asset("lib/assets/post2.jpg"))),
+                    Container(
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                child: Padding(
+                    padding: const EdgeInsets.all(2),
+                    child: Image.asset("lib/assets/post3.jpg")))
           ],
-         
-         
         ),
       ),
     );

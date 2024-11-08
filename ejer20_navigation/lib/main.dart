@@ -1,5 +1,5 @@
-import 'package:ejer20_navigation/primeraPantalla.dart';
-import 'package:ejer20_navigation/segundaPantalla.dart';
+import 'package:ejer20_navigation/primera_pantalla.dart';
+import 'package:ejer20_navigation/segunda_pantalla.dart';
 import 'package:flutter/material.dart';
 
 void main() {
