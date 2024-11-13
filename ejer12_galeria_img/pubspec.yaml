@@ -18,6 +18,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - lib/assets/post0.jpg
     - lib/assets/post1.jpg
     - lib/assets/post2.jpg
     - lib/assets/post3.jpg
+    - lib/assets/post4.jpg
+    - lib/assets/post5.jpg
+    - lib/assets/post6.jpg
+    - lib/assets/post7.jpg
+    - lib/assets/post8.jpg
+    - lib/assets/post9.jpg

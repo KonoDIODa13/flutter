@@ -23,6 +23,8 @@ class _RegistroFormState extends State<RegistroForm> {
     _contrasennaController.clear();
   }
 
+  // funciones para validar los campos
+
   String? _validarNombre(String? value) {
     if (value == null || value.isEmpty) {
       return 'Por favor, ingresa tu nombre.';
@@ -34,7 +36,10 @@ class _RegistroFormState extends State<RegistroForm> {
     if (value == null || value.isEmpty) {
       return 'Por favor, ingresa tu correo electrónico.';
     }
-    if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+
+    //(r'^[^@]+@[^@]+\.[^@]+'
+    if (!RegExp(r'^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$')
+        .hasMatch(value)) {
       return 'Por favor, ingresa un correo electrónico válido.';
     }
     return null;
@@ -57,9 +62,19 @@ class _RegistroFormState extends State<RegistroForm> {
       final correo = _correoController.text;
       final contra = _contrasennaController.text;
 
-      print("Nombre: $nombre\nCorreo: $correo\nContraseña: $contra");
+      print("\nNombre: $nombre\nCorreo: $correo\nContraseña: $contra");
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Registro realizado con éxito'))
+        );
       _limpiarFormulario();
     }
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
   }
 
   @override

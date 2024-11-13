@@ -26,7 +26,8 @@ class _PostsScreenState extends State<PostsScreen> {
       ),
       body: FutureBuilder<List<Post>>(
         future: futurePosts,
-        builder: (context, snapshot) {// esto es para cuando da error
+        builder: (context, snapshot) {
+          // esto es para cuando da error
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {

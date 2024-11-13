@@ -12,29 +12,20 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: GridView.count(
-          crossAxisCount: 3,
-          children: [
-            Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                child: Padding(
-                    padding: const EdgeInsets.all(2),
-                    child: Image.asset("lib/assets/post1.jpg"))),
-                    Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                child: Padding(
-                    padding: const EdgeInsets.all(2),
-                    child: Image.asset("lib/assets/post2.jpg"))),
-                    Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                child: Padding(
-                    padding: const EdgeInsets.all(2),
-                    child: Image.asset("lib/assets/post3.jpg")))
-          ],
-        ),
+            crossAxisCount: 3,
+            children: List.generate(9, (index) {
+              return Center(
+                child: ClipRRect(
+                    // para redondearlo
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset("./lib/assets/post$index.jpg")),
+              );
+            })),
       ),
     );
   }
+  /*
+     decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+  */
 }
