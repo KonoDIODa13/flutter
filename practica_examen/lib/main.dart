@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practica_examen/formulario.dart';
+import 'package:practica_examen/ejercicio.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,10 +13,13 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: "Calculadora IMC",
       home: Scaffold(
-        body: Column(children: [
-          Title(color: Colors.black, child: Text("Calculadora IMC")),
-          Formulario()
-        ],),
+        backgroundColor: Colors.white,
+        body: Column(
+          children: [
+            Title(color: Colors.white, child: const Text("Calculadora IMC")),
+            Ejercicio()
+          ],
+        ),
       ),
     );
   }

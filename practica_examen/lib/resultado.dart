@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 
 class Resultado extends StatefulWidget {
-  final double resultado;
-  const Resultado({super.key, required this.resultado});
+  double resultado;
+  Resultado({super.key, required this.resultado});
 
   @override
   State<Resultado> createState() => _ResultadoState();
@@ -15,12 +15,18 @@ class _ResultadoState extends State<Resultado> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          Text(widget.resultado.toString()),
-          ElevatedButton(onPressed: volver(context), child: Text("Volver"))
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Text(widget.resultado.toStringAsFixed(2)),
+            ElevatedButton(
+                onPressed: () {
+                  volver(context);
+                },
+                child: const Text("Volver"))
+          ],
+        ),
       ),
     );
   }

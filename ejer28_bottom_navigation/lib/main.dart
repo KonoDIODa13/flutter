@@ -1,5 +1,5 @@
-import 'package:ejer28_bottom_navigation/navegacion_inferior.dart';
 import 'package:flutter/material.dart';
+import 'package:ejer28_bottom_navigation/navegacion_inferior.dart';
 
 void main() {
   runApp(const MainApp());
